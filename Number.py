@@ -63,4 +63,65 @@ print("I eat %d apples. so I was sick for %s days." % (number,day))
 #%표시할때는 %%
 print("it is %d%%." % 98)
 
+#format 함수를 사용한 포매팅
+print("I eat {0} apples". format(3))
+
+#오른쪽 정렬
+print("{0:>10}". format("hi"))
+
+#가운데 정렬
+print("{0:^10}". format("hi"))
+
+#공백채우기
+print("{0:=^10}". format("hi"))
+
+# f 문자열 포매팅
+name = '이주원'
+age = 30
+print(f'나의 이름은 {name}입니다. 나이는 {age}입니다.')
+
+#'!!!python!!!'
+print("{0:!^12}". format("python"))
+print(f'{"python":!^12}')
+
+#문자중 b의 개수
+a= "hobby"
+print(a.count('b'))
+
+#위치 알려주기
+a = "Python is the best choice"
+print(a.find('b'))
+print(a.index('b'))
+
+#문자열 삽입
+print(",".join('abcd'))
+print(",".join(['a','b','c','d']))
+
+#소문자 -> 대문자 바꾸기
+a ="hi"
+print(a.upper())
+
+#대문자 -> 소문자
+a = "HI"
+print(a.lower())
+
+#공백지우기
+a = "    jangk34   "
+print(a.lstrip())
+print(a.rstrip())
+print(a.strip())
+
+#문자열 바꾸기
+a = "Life is too short"
+print(a.replace("Life", "your leg"))
+
+#문자열 나누기
+a = "Life is too short"
+print(a.split())
+#특정 구분자로 나누기 -> split() 안에 특정 구분자 입력
+b = "a:b:c:d"
+print(b.split(":"))
+
+
+
 
