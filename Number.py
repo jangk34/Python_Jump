@@ -240,7 +240,7 @@ b = [6,7]
 a.extend(b)
 print(a)
 
-########## 튜플 자료형
+########## 튜플 자료형 - 프로그램이 실행되는 동안 값이 항상 변하지 않음
 t = ()
 t2 = (1,) ## 1개값은 뒤에 ,
 t3 = (1,2,3)
@@ -279,4 +279,190 @@ print(a)
 
 del a[1] ## 딕셔너리 요소 삭제
 print(a)
+
+#딕셔너리에서 Key 사용해 Value 얻기
+grade = {'pey' : 10, 'julliet' : 99}
+print(grade['pey'])
+print(grade['julliet'])
+
+a = {1:'a', 2:'b'}
+print(a[1])
+print(a[2])
+
+#key 리스트 만들기
+a = {'name':'pey', 'phone':'0119993323', 'birth' :'1118'}
+print(a.keys())
+
+for k in a.keys():
+    print(k)
+
+print('name' in a)
+print('phoee' in b)
+
+    # get으로 얻기
+print(a.get('name'))
+
+#list출력-key
+print(list(a.keys()))
+
+#value리스트
+print(a.values())
+
+#key,value 쌍 얻기
+print(a.items())
+
+#key,value 쌍 지우기
+print(a.clear())
+
+#get(x,'디폴트 값')
+print(a.get('foo', 'bar'))
+
+##예제
+a = {'name' : '홍길동', 'birth' : '1128', 'age' : '30'}
+print('birth' in a)
+print('print' in a)
+
+######## 집합 자료형 ###########
+
+s1 = set([1,2,3])
+print(s1)
+
+#문자열
+s2 =set("HELLO")
+print(s2)
+
+#교집합,합집합,차집합
+s1 =set([1,2,3,4,5,6])
+s2 =set([4,5,6,7,8,9])
+
+#교집합
+print(s1 & s2)
+
+#합집합
+print(s1 | s2)
+
+#차집합
+print(s1 - s2)
+print(s2 - s1)
+
+#값추가
+s1 = set([1,2,3])
+s1.add(4)
+print(s1)
+
+#여러값 추가
+s2 = set([1,2,3])
+s2.update([4,5,6])
+print(s2)
+
+#특정 값 제거하기
+s1.remove(2)
+print(s1)
+
+####### 불 자료형 - 거짓과 참
+a = True
+b = False
+
+print(2>1)
+
+## 파이썬에서 변수란 객체를 가리키는 것
+a = [1,2,3]
+print(id(a))
+
+#리스트에 복사
+b = a
+print(id(b))
+print(a is b)
+
+#[:] 사용
+a = [1,2,3]
+b = a[:]
+a[1] = 4
+print(a)
+print(b)
+
+#copy 모듈  - 두 변수가 같은 값을 가지면서 다른 객체를 생성
+from copy import copy
+a = [1,2,3]
+b =copy(a)
+print(b)
+print(b is a)
+
+#튜플 복습 - 괄호생략 가능
+a ,b = 'python' , 'life'
+print(b)
+
+#리스트
+[a,b] = ['python', 'life']
+print(b)
+a = b = 'python'
+print(b)
+
+#예제 - 서로 다른 메모리를 가리키므로 false
+a = [ 1,2,3 ]
+b = [ 1,2,3 ]
+print(a is b)
+
+## p112 예제1
+h = { '국어' : 80, '영어' : 75, '수학' : 55}
+print((h['국어']+h['영어']+h['수학'])/3)
+# 예제2
+# 1 % 2
+
+# 예제3
+pin = "881120-1068234"
+print("yyyymmdd = " + "19" + pin[:6])
+print("num = " + pin[7:])
+
+#예제4
+print("sex = " + pin[7:8])
+
+#예제5
+a = "a:b:c:d"
+b = a.replace(":","#")
+print(b)
+
+#예제6
+a = [1,3,5,4,2]
+a.sort()
+print(a)
+a.reverse()
+print(a)
+
+
+#예제7
+a = ['Life', 'is', 'too', 'short']
+print(" ".join(a)) # 합침
+
+#예제8
+a = (1,2,3)
+a = a + (4,) # 튜플 한개의 값만 추가할때는 뒤에 ,
+print(a)
+
+#예제9
+a = dict()
+print(a)
+a['name']='python'
+
+#예제10
+
+#예제11
+a = {'A' : 90, 'B' : 80, 'C' : 70}
+result = a.pop('B') # 추출
+print(a)
+print(result)
+
+#예제11
+a = [1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5]
+aSet = set(a) #a 리스트를 집합 자료형으로 변환 ( 중복 없애줌 )
+b = list(aSet) #집합 자료형을 리스트 자료형으로 다시 변환
+print(b)
+
+#예제12
+a = b = [1,2,3]
+a[1] = 4
+print(b)
+
+
+
 
